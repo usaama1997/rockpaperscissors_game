@@ -1,15 +1,18 @@
-
-window.onload = function() {
+ window.onload = function() {
 
     var userScore = 0;
     var compScore = 0;
     var userScore_span = document.querySelector("#user-score");
     var compScore_span = document.querySelector("#comp-score");
-    var scoreBoard_div = document.querySelector(".score-board");
+    
     var result_p       = document.querySelector(".result > p");
     var rock_div       = document.querySelector("#rock");
     var paper_div      = document.querySelector("#paper");
     var scissors_div   = document.querySelector("#scissors");
+
+    let highScore      = 0  
+    var highScore_span = document.querySelector('#high-score')
+    var reset_score    = document.querySelector('#reset_id')
     
     
     function getComputerChoice() {
@@ -33,8 +36,14 @@ window.onload = function() {
       userScore++;
       userScore_span.innerHTML = userScore;
       compScore_span.innerHTML = compScore;
-      //var smallUserWord = "user".fontsize(3).sub();
-      //var smallCompWord = "comp".fontsize(3).sub();
+
+      highScore_span.innerHTML = highScore;
+      if(userScore > highScore){
+        high_Score()
+      }
+      highScore_span.innerHTML = highScore;
+
+
       var userChoice_div = document.getElementById(user);
       result_p.innerHTML       = "User chooses " + convertWord(user) + " and beats Computer as it choosed " +
                                  comp  + ". So, You won. 🔥";
@@ -46,8 +55,7 @@ window.onload = function() {
       compScore++;
       userScore_span.innerHTML = userScore;
       compScore_span.innerHTML = compScore;
-      //var smallUserWord = "user".fontsize(3).sub();
-      ///var smallCompWord = "comp".fontsize(3).sub();
+      
       var userChoice_div = document.getElementById(user);
       result_p.innerHTML       = "User chooses " + convertWord(user) + " and loses to Computer as it choosed " +
                                  comp + ". So, You lost. 👎"; 
@@ -56,8 +64,7 @@ window.onload = function() {
     }
     
     function draw(user, comp) {
-      //var smallUserWord = "user".fontsize(3).sub();
-      //var smallCompWord = "comp".fontsize(3).sub();
+     
       var userChoice_div = document.getElementById(user);
       result_p.innerHTML       = "User chooses " + convertWord(user) + " and draws with Computer as it choosed " +
                                  comp +  ".";
@@ -85,7 +92,19 @@ window.onload = function() {
           break;
       }
     }
-    
+
+    function high_Score(){
+      let temp = userScore;
+      highScore = userScore;
+
+    }
+
+    function scorezero() {
+      compScore = 0;
+      userScore = 0;
+      userScore_span.innerHTML = 0;
+      compScore_span.innerHTML = 0;
+    }
     
     
     function main() {
@@ -100,7 +119,12 @@ window.onload = function() {
       scissors_div.addEventListener("click", function() {
         game("scissors");
       });
+
+      reset_score.addEventListener("click", function() {
+        scorezero();
+      });
     }
+
     
     main();
     
