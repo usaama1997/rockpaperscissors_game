@@ -8,36 +8,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Rock Paper Scissors Game</title>
+  <title>Rock Paper Scissors Game </title>
 </head>
 <body>
 
   <header>
     <h1>Rock Paper Scissors</h1>
   </header>
+    
 
   <div class="score-board">
     <div id="user-label" class="badge">user</div>
     <div id="comp-label" class="badge">comp</div>
     <span id="user-score">0</span>:<span id="comp-score">0</span>
   </div>
+  
 
   <div class="result">
-    <p>Paper covers rock. You win!</p>
+    <p>Make your move</p>
   </div>
 
   <div class="choices">
     <div id="rock" class="choice">
-      <img src="rock.png" alt="rock">
+      <img src="images/rock.png" alt="rock" title="Rock">
     </div>
     <div id="paper" class="choice">
-      <img src="paper.png" alt="paper">
+      <img src="images/paper.png" alt="paper" title="Paper">
     </div>
     <div id="scissors" class="choice">
-      <img src="scissors.png" alt="scissors">
+      <img src="images/scissors.png" alt="scissors" title="Scissors">
     </div>
   </div>
-  <p id="action-message">Make your move</p>
+  <div class="display-high-score"><h1>High Score : <span id="high-score"></span></h1></div>
+
+  <div class="help_reset_images">
+    <div class="help_reset">
+
+      <a href="help.html" style="border:0; text-decoration:none; outline:none">
+        <div class="help_hover"><img src="images/help.png" alt="how to play" title="How to Play">
+        </div>
+        
+      </a>
+    </div>
+    
+    <div id="reset_id" class="help_reset">
+      <div class="reset_hover">
+        <img src="images/reset.png" alt="reset score" title="Reset Score">
+      </div>
+    </div>
+    <h3>Don't Refresh the page else, it will remove high score.</h3>
+  </div>
+
+  <script>
+     function reloadPage(){
+      window.location.reload();
+    }
+    
+  </script>
 
 </body>
 </html>

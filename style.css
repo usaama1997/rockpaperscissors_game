@@ -58,7 +58,7 @@
     color: white;
   }
   
-  .result > p {
+  .result > p{
     text-align: center;
     font-weight: bold;
     font-family: Asap, sans-serif;
@@ -73,11 +73,39 @@
     padding: 30px;
     display: inline-block;
   }
-  
-  .choice > img {
+
+  .display-high-score{
+    text-align: center;
+    font-weight: bold;
+    font-family: Asap, sans-serif;
+    color: white;
+  }
+
+  .help_reset_images{
+    text-align: center;
+  }
+
+  .help_reset{
+    padding: 30px;
+    display: inline-block;
+  }
+
+  .help_reset_images > h3{
+    color: wheat;
+    font-weight: normal;
+  }
+
+  img{
     width: 100px;
   }
-  
+ 
+  .help_reset:hover{
+    cursor: pointer;
+    border: 3px solid #2023b3;
+    box-shadow: 0 0 9px #2023b3;
+    border-radius: 50%;
+  }
+
   .choice:hover {
     cursor: pointer;
   }
