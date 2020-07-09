@@ -4,3 +4,5 @@ This is a simple project developed in HTML, CSS and JavaScript which allows user
 This game is bit advance as it provides some new features like:
 1. Tracking of high score.
 2. Reseting of score.
+
+You can play game [here] (https://usaama1997.github.io/rockpaperscissors_game)
